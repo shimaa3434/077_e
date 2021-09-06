@@ -1,0 +1,430 @@
+:root{
+    --white: #fff;
+    --black: #000;
+    --main: #df5d21;   
+    --bg: rgb(39, 30, 30);
+}
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Besley", serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+*::selection{
+    background-color: var(--main);
+    color: var(--white);
+}
+body{
+    background: var(--bg);
+}
+.btn{
+    text-transform: capitalize;
+    border: 6px double var(--main);
+    color: var(--main);
+    font-weight: bold;
+    padding: 10px 30px;
+    width: 200px;
+    margin: 10px auto;
+    transition: 0.5s;
+}
+.btn:hover{
+    color: var(--white) !important;
+    border-color: var(--white) !important;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    bottom:  0;
+    left:  0;
+    z-index: -1;
+    height: 0%;
+    width: 0;
+    background: var(--main);
+    display: block;
+    transition: all 0.3s ease;
+}
+.btn:hover::before{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    text-align: center;
+    margin: 70px auto;
+    color: var(--white);
+    text-transform: capitalize;
+}
+.content h6{
+    font-weight: bold;
+    font-size: 2em;
+}
+.content h6 span{
+    font-weight: bold;
+    color: var(--main);
+    font-size: 2.2em;
+}
+html::-webkit-scrollbar{
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main);
+}
+html::-webkit-scrollbar-track{
+    background: #573a2d;
+}
+
+.scroller{
+    overflow-y: scroll;
+    scrollbar-color: var(--main) #573a2d;
+    scrollbar-width: 5px;
+}
+/* navbar */
+.navbar{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar.scroll{
+    background: var(--bg);
+    padding: 10px;
+}
+.navbar-brand{
+    font-weight: bold;
+    font-size: 2em;
+    color: var(--white);
+    padding: 0 40px;
+}
+.navbar-brand:hover{
+    color: var(--white);
+}
+.navbar-brand span{
+    color: var(--main);
+    font-weight: 900;
+}
+.navbar-nav{
+    margin-top: 10px;
+    margin-left: -80px !important;
+}
+.nav-link{
+    font-weight: 500;
+    color: var(--white) !important;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+.nav-link:hover{
+    color: var(--main) !important;
+}
+.navbar .btn{
+    width: 200px;
+    border: 1px solid var(--main);
+    color: var(--main);
+    padding: 10px 30px;
+    margin-top: 10px;   
+}
+.nav-item.active .nav-link{
+    color: var(--main) !important;
+}
+
+/* navbar */
+
+/* header */
+.header{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.header .imgparent{
+    position: relative;
+}
+.header img{
+    height: 100vh;
+    width: 100%;
+}
+.header .img-overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    opacity: 0.7;
+}
+.header .img-content{
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white) !important;
+}
+.header .img-content h6{
+    font-weight: 500;
+    font-size: 45px;
+}
+.header .img-content h5{
+    font-weight: 600;
+    font-size: 55px;
+    color: var(--main);
+}
+.header .btn{
+    border: 6px double var(--main);
+    color: var(--white);
+    font-weight: bold;
+    padding: 10px 30px;
+    width: 200px;
+    margin: 10px auto;
+}
+/* header */
+
+/* welcome */
+.welcome{
+    margin: 200px auto;
+    color: var(--white);
+}
+.welcome img{
+    height: 600px;
+    border: 5px;
+    object-fit: cover;
+}
+.welcome .offset-sm-2 h5{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.welcome .offset-sm-2 h5 span{
+    font-weight: 900;
+    color: var(--main);
+    font-size: 60px;
+}
+/* welcome */
+
+
+/* delicious */
+.delicious{
+    text-align: center;
+    margin-bottom: 200px;
+    color: var(--white);
+}
+.delicious .row{
+    margin-top: 70px;
+}
+.delicious .one{
+    margin-top: 100px;
+}
+.delicious img{
+    /* height: 400px; */
+    object-fit: contain;
+}
+/* delicious */
+
+/* testimonail */
+.testimonail{
+    margin-bottom: 200px;
+    color: var(--white);
+}
+.testimonail .box{
+    text-align: center;
+    box-shadow: 100px 100px 200px -100px rgba(138, 100, 100, 0.5), inset 10px 10px 10px -10px rgba(175, 107, 107, 0.5);
+    padding: 10px;
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.testimonail .box:hover{
+    box-shadow: 255px 255px 255px -255px rgba(138, 100, 100, 0.5), inset 255px 255px 255px -255px rgba(175, 107, 107, 0.9);
+}
+.testimonail .box h5{
+    font-weight: 500;
+    color: var(--main);
+    font-size: 20px;
+}
+.testimonail .box img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+    object-fit: cover;
+}
+.testimonail .mid{
+    margin-top: 100px;
+}
+/* testimonail */
+
+
+/* footer */
+footer{
+    background: #573a2d;
+    padding: 100px;
+    text-align: center;
+    color: var(--main);
+}
+footer h6{
+    font-weight: 500;
+    font-size: 40px;
+    margin: 5px auto;
+}
+footer .btn{
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 20px;
+}
+footer .btn:hover{
+    background: var(--main);
+    color: var(--white);
+}
+footer h5{
+    font-weight: 500;
+    cursor: pointer;
+}
+footer h5:hover{
+    text-decoration: underline wavy var(--white);
+}
+/* footer */
+
+
+
+
+
+@media (max-width:768px){
+    html{
+        font-size: 70%;
+    }
+    .content{
+        text-align: center;
+        margin: 40px auto;
+        color: var(--white);
+        text-transform: capitalize;
+    }
+    .content h6{
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    .content h6 span{
+        font-weight: bold;
+        color: var(--main);
+        font-size: 2em;
+    }
+    .navbar-brand{
+        padding: 0 20px;
+    }
+    .navbar .btn{
+        width: 100px;
+        border: 1px solid var(--main);
+        color: var(--main);
+        padding: 10px;
+        margin-top: 10px;   
+    }
+    .header img{
+        height: 75vh;
+        width: 100%;
+    }
+    .header .img-content{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--white) !important;
+    }
+    .header .img-content h6{
+        font-weight: 500;
+        font-size: 25px;
+    }
+    .header .img-content h5{
+        font-weight: 600;
+        font-size: 45px;
+        color: var(--main);
+    }
+    .header .btn{
+        border: 6px double var(--main);
+        color: var(--white);
+        font-weight: bold;
+        padding: 10px 20px;
+        width: 150px;
+        font-size: 15px;
+        margin: 10px auto;
+    }
+    .welcome{
+        margin: 100px auto;
+        color: var(--white);
+    }
+    .welcome img{
+        height: 400px;
+        border: 5px;
+        object-fit: cover;
+    }
+    .welcome .offset-sm-2 h5{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .welcome .offset-sm-2 p:last-of-type{
+        display: none;
+    }
+    .welcome .offset-sm-2 h5 span{
+        font-weight: 900;
+        font-size: 30px;
+    }
+    .testimonail{
+        margin-bottom: 100px;
+    }
+
+    .testimonail .box h5{
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .testimonail .box img{
+        height: 75px;
+        width: 75px;
+        margin: 10px auto;
+    }
+    .testimonail .mid{
+        margin-top: 50px;
+    }
+    footer{
+        padding: 75px;
+    }
+    footer h6{
+        font-size: 30px;
+    }
+    footer .btn{
+        width: 200px;
+        margin: 25px auto;
+    }
+    
+}
+
+@media (max-width:575px){
+    
+    .navbar .btn{
+        display: none;  
+    }
+    .navbar-brand{
+        padding: 0 10px;
+    }
+    .navbar-nav{
+        margin-top: 10px;
+        margin-left: 20px !important;
+    }
+    .nav-link{
+        font-weight: 500;
+        color: var(--white) !important;
+        margin-top: 10px;
+        margin-left: 5px;
+        text-transform: capitalize;
+    }
+    .welcome{
+        text-align: center;
+    }
+    .delicious .one{
+        margin-top: 50px;
+    }
+    .testimonail .mid{
+        margin-top: 0;
+    }
+    .testimonail .box{
+        margin-top: 50px;
+    }
+}

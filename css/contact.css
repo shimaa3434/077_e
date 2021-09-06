@@ -1,0 +1,51 @@
+.contact{
+    margin: 100px auto;
+}
+.contact-form{
+    margin: 50px auto;
+}
+.contact-form .card{
+    background: transparent;
+    border: 5px solid;
+    border-image-slice: 3;
+    border-image-source: linear-gradient(330deg, var(--main), transparent , var(--main));
+    transition: all 0.3s ease;
+    margin: 10px auto;
+}
+.contact-form .card:hover{
+    background: var(--white);
+    color: var(--bg);
+    border: none;
+}
+.contact-form .card .box .bg-icon{
+    color: var(--white);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 112px;
+    border-radius: 50%;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+}
+.contact-form .card:hover .box .bg-icon{
+    background: var(--main);
+}
+.contact-form .card .box h5{
+    font-weight: bold;
+    font-size: 2vw;
+    color: var(--main);
+    text-transform: capitalize;
+}
+.contact-form .form-control{
+    border-top: none;
+    background: transparent;
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(330deg, var(--main), transparent , var(--main));
+}
+.contact-form textarea{
+    resize: none;
+}
+.contact-form label{
+    text-transform: capitalize;
+}

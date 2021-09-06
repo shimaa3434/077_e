@@ -1,0 +1,22 @@
+.menu{
+    margin: 50px auto;
+}
+.menu .card{
+    background: transparent;
+    color: var(--white);
+    border: none;
+}
+.menu .card .card-title, .menu .card span{
+    color: var(--main);
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.menu .card img{
+    height: 200px;
+}
+.menu .card span del{
+    color: rgb(99, 95, 95);
+}
+.menu .btn{
+    width: 150px;
+}

@@ -1,0 +1,74 @@
+.about_us{
+    margin: 100px auto;
+    color: var(--white);
+}
+
+.team{
+    margin: 100px auto;
+    color: var(--white);
+}
+
+.hexagon{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.hexagon .shape{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: 0.5s;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.hexagon .shape img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hexagon:hover .shape {
+    transform: translateY(-30px);
+}
+.hexagon .shape .team_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(45deg, var(--main), #df5d2144, #df5d21);
+    opacity: 0;
+    color: var(--white);
+    transition: 0.5s;
+}
+.hexagon:hover .shape .team_content{
+    opacity: 1;
+}
+.hexagon .shape .team_content h2{
+    font-size: 2vw;
+    font-weight: bold;
+}
+.hexagon .shape .team_content p{
+    font-size: 1.5vw;
+}
+
+@media (max-width:765px){
+    .hexagon .shape .team_content h2{
+        font-size: 1.5vw;
+    }
+    .hexagon .shape .team_content p{
+        font-size: 1vw;
+    }
+}
+
+@media (max-width:500px){
+    .hexagon .shape .team_content h2{
+        font-size: 7vw;
+    }
+    .hexagon .shape .team_content p{
+        font-size: 5vw;
+    }
+}
